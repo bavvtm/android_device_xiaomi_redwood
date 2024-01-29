@@ -277,7 +277,7 @@
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
         <item>3.0</item>
-        <item>800.0</item>
+        <item>1000.0</item>
     </array>
 
     <!-- The maximum range of gamma adjustment possible using the screen
@@ -290,7 +290,7 @@
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
     <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">2000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
 
     <!-- Fast brightness animation ramp rate in brightness units per second-->
     <integer name="config_brightness_ramp_rate_fast">307</integer>
@@ -585,7 +585,7 @@
     <!-- Minimum screen brightness setting allowed by power manager.
          The user is forbidden from setting the brightness below this level.
          Equivalent to 10/4095. -->
-    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.00244200244</item>
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.00196078431</item>
 
     <!-- Maximum screen brightness allowed by the power manager.
          The user is forbidden from setting the brightness above this level.  -->
@@ -594,7 +594,7 @@
     <!-- Default screen brightness setting
          Must be in the range specified by minimum and maximum.
          Equivalent to 307/4095 (default for this device)    -->
-    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.07496947496</item>
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.262745098</item>
 
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
@@ -721,46 +721,15 @@
          @see https://www.w3.org/TR/SVG/paths.html#PathData
     -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">
-        M 66,68
-        a 20 20 0 1 0 67,0
-        a 20 20 0 1 0 -67,0
-        Z
-        M 0,0
-        L 134,0
-        Z
-        M 0,0
-        L 0,104
-        Z
-        @left
+        M 0,0 H -28 V 94 H 28 V 0 H 0 Z
     </string>
-
-    <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
-         one single bounding rect per device edge to the app via
-         {@link DisplayCutout#getBoundingRect}. Note that this path should try to match the visual
-         appearance of the cutout as much as possible, and may be smaller than
-         config_mainBuiltInDisplayCutout
-         -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
-        M 0,0
-        H 134
-        V 104
-        H 0
-        V 0
-        Z
-        @left
-    </string>
-
-    <!-- Whether the display cutout region of the main built-in display should be forced to
-         black in software (to avoid aliasing or emulate a cutout that is not physically existent).
-    -->
-    <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
 
     <!-- The default peak refresh rate for a given device. Change this value if you want to allow
          for higher refresh rates to be automatically used out of the box -->
     <integer name="config_defaultRefreshRate">0</integer>
 
     <!-- The default peak refresh rate. -->
-    <integer name="config_defaultPeakRefreshRate">90</integer>
+    <integer name="config_defaultPeakRefreshRate">120</integer>
 
     <!-- Pocket Lock -->
     <bool name="config_pocketModeSupported">false</bool>
@@ -811,7 +780,7 @@
     <array name="config_sfps_sensor_props_0" translatable="false">
         <item>local:4630946480857061762</item> <!--item>displayId</item-->
         <item>1080</item> <!--item>sensorLocationX</item-->
-        <item>960</item> <!--item>sensorLocationY</item-->
+        <item>920</item> <!--item>sensorLocationY</item-->
         <item>200</item> <!--item>sensorRadius</item-->
     </array>
     

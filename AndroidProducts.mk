@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_lisa.mk
+    $(LOCAL_DIR)/aosp_redwood.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_lisa-user \
-    aosp_lisa-userdebug \
-    aosp_lisa-eng
+    aosp_redwood-user \
+    aosp_redwood-userdebug \
+    aosp_redwood-eng

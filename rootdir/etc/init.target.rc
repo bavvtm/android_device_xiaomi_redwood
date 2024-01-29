@@ -133,7 +133,9 @@ on post-fs-data
     chown system camera /dev/al6021
     
     # Create data folder for FPC fingerprint
-    mkdir /data/vendor/fpc 0770 system system
+    mkdir /data/vendor/fpdump 0770 system system
+    mkdir /data/vendor/goodix 0770 system system
+    mkdir /mnt/vendor/persist/goodix 0770 system system
     
     mkdir /mnt/vendor/dsp 0770 root root
     copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
@@ -189,6 +191,12 @@ on boot
     chown system system /sys/class/thermal/thermal_message/charger_temp
     chown cameraserver cameraserver /sys/class/thermal/thermal_message/flash_state
     write /dev/cpuset/audio-app/cpus 1-2
+
+    # Set goodix fingerprint permission
+    chown system system /dev/goodix_fp
+    chown system graphics /sys/bus/platform/devices/soc:xiaomi_fingerprint/fingerdown
+    chmod 0666 /dev/goodix_fp
+    chmod 0664 /sys/bus/platform/devices/soc:xiaomi_fingerprint/fingerdown
 
     # Set xiaomi touch permissions
     chown system system /dev/xiaomi-touch
