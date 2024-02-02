@@ -17,6 +17,9 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# GApps
+WITH_GAPPS := true
+
 PRODUCT_BRAND := POCO
 PRODUCT_DEVICE := redwood
 PRODUCT_MANUFACTURER := Xiaomi
