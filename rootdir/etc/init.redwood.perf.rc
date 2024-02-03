@@ -13,6 +13,8 @@ on post-fs-data
     write /proc/sys/vm/page-cluster 0
 
 on property:vendor.post_boot.parsed=1
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.redwood.perf.sh
+
     # Setup runtime cpusets
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/background/cpus 0-1
