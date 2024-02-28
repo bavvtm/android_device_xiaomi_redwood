@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_redwood.mk
+    $(LOCAL_DIR)/genesis_redwood.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_redwood-user \
-    aosp_redwood-userdebug \
-    aosp_redwood-eng
+    genesis_redwood-user \
+    genesis_redwood-userdebug \
+    genesis_redwood-eng
