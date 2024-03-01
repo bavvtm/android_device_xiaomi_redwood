@@ -411,7 +411,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.xiaomi-libperfmgr \
+    android.hardware.power-service-qti \
     libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
